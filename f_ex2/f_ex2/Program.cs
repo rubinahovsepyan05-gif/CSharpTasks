@@ -8,18 +8,18 @@ class Program
         int n=numbers.Length;//զանգվածի երկարությունը պահում եմ փոփոխականի մեջ,որ ընթացքում կարողանամ փոփոխեմ
         for (int i = 0; i < n; i++)
         {
-            int count = 0;//count-ը օգտագործում եմ չկրկնվող տարրերը չտպելու համար
+            bool isDuplicate = false;//isDuplicate-ը օգտագործում եմ չկրկնվող տարրերը չտպելու համար
             for (int j = i + 1; j < n; j++)
             {
                 if (numbers[i] == numbers[j])
                 {
-                    count++;
+                    isDuplicate = true;
                     numbers[j] = numbers[n - 1];
                     j--;
                     n--;//ջնջելուց հետո զանգվածի երկարությունը փոքրացնում եմ
                 }
             }
-            if (count > 0)
+            if (isDuplicate)
             {
                 Console.Write(numbers[i] + " ");//տպում եմ կրկնվող տարրը
             }
