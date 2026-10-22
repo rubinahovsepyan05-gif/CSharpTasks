@@ -12,14 +12,10 @@ class Program
             { 4, 2, 1 }
         };
         //առաջին տողի գումարը պահում եմ որպես ամենամեծ
-        int row = 0;
-        int maxsum = 0;
-        for (int i = 0; i < matrix.GetLength(1); i++)
-        {
-            maxsum += matrix[row, i];
-        }
+        int row = -1;
+        int maxsum = int.MinValue;
 
-        for (int i = 1; i < matrix.GetLength(0); i++)
+        for (int i = 0; i < matrix.GetLength(0); i++)
         {
             int sum = 0;
             for (int j = 0; j < matrix.GetLength(1); j++)
