@@ -14,10 +14,8 @@ class Program
                 if (numbers[i] == numbers[j])
                 {
                     count++;
-                    for (int k = j; k < n - 1; k++)//ամեն գտածս կրկնվող տարրը զանգվածը մի հատ ձախ բերելով ջնջում եմ
-                    {
-                        numbers[k] = numbers[k + 1];
-                    }
+                    numbers[j] = numbers[n - 1];
+                    j--;
                     n--;//ջնջելուց հետո զանգվածի երկարությունը փոքրացնում եմ
                 }
             }
